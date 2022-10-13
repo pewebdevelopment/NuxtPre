@@ -83,7 +83,7 @@ export default [
       },
       {
         label: "External link",
-        href: "https://justboil.me",
+        href: "",
         icon: mdiOpenInNew,
         target: "_blank",
       },
