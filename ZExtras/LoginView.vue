@@ -1,6 +1,18 @@
-
 <script setup>
 import { reactive, ref, computed } from "vue";
+import { RouterLink } from "vue-router";
+import { mdiAccount, mdiHome } from "@mdi/js";
+
+// import CardBox from "@/components/CardBox.vue";
+// import FormCheckRadioPicker from "@/components/FormCheckRadioGroup.vue";
+// import FormField from "@/components/FormField.vue";
+// import FormControl from "@/components/FormControl.vue";
+// import BaseButton from "@/components/BaseButton.vue";
+// import BaseLevel from "@/components/BaseLevel.vue";
+// import BaseButtons from "@/components/BaseButtons.vue";
+
+// import ButtonTextLink from "@/components/Premium/ButtonTextLink.vue";
+// import SectionFormScreen from "@/components/Premium/SectionFormScreen.vue";
 
 const form = reactive({
   login: "johndoe",
@@ -29,29 +41,21 @@ const submit = () => {
 };
 
 const passShowHideClicked = ref(true);
-
 </script>
 
-
 <template>
-    <div>
-     This is my empty Loginview page
+  <div>
+  <NuxtLayout name="zen">
 
+    <PremSectionFormScreen v-slot="{ cardClass }" bg="purplePink" has-promo>
      <div>
-      <NuxtLayout>
-   
       
-  <!-- <PremSectionFormScreen v-slot="{ cardClass }" bg="purplePink" has-promo>
-
-        </PremSectionFormScreen> -->
-
-          <CardBox
-            :class="[cardClass, cardClassAddon]"
-            is-form
-            @submit.prevent="submit"
-          >
-
-          <FormField
+      <CardBox
+        :class="[cardClass, cardClassAddon]"
+        is-form
+        @submit.prevent="submit"
+      >
+        <FormField
           label="Login"
           :error="hasError"
           help="Please enter your login"
@@ -65,7 +69,7 @@ const passShowHideClicked = ref(true);
             autocomplete="username"
           />
         </FormField>
-  
+
         <FormField
           label="Password"
           :error="hasError"
@@ -82,7 +86,7 @@ const passShowHideClicked = ref(true);
             @right-icon-click="passShowHideClicked = true"
           />
         </FormField>
-  
+
         <BaseLevel mobile>
           <FormCheckRadioPicker
             v-model="form.remember"
@@ -94,7 +98,7 @@ const passShowHideClicked = ref(true);
             Forgot password?
           </RouterLink>
         </BaseLevel>
-  
+
         <template #footer>
           <BaseLevel mobile>
             <BaseButtons>
@@ -109,18 +113,11 @@ const passShowHideClicked = ref(true);
             <PremButtonTextLink to="/" :icon="mdiHome" label="Home" small />
           </BaseLevel>
         </template>
-         
-          </CardBox>
+      </CardBox>
+    </div> 
 
+    </PremSectionFormScreen>
 
-     
-
-      </NuxtLayout>
-    
-    </div>
-
-
-
-    </div>
+  </NuxtLayout>
+</div>
 </template>
-
