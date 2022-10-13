@@ -65,7 +65,7 @@ export default [
     icon: mdiAccountCircle,
   },
   {
-    to: "/prem/loginView",
+    to: "/loginView",
     label: "Login",
     icon: mdiLock,
   },
@@ -102,7 +102,7 @@ export default [
     ],
   },
   {
-    href: "https://justboil.me/tailwind-admin-templates/vue-dashboard/",
+    href: "",
     label: "About",
     icon: mdiHelpCircle,
   },
