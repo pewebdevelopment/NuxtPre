@@ -34,8 +34,7 @@ const passShowHideClicked = ref(true);
 
 
 <template>
-    <div>
-     This is my empty Loginview page
+  
 
      <div>
       <NuxtLayout>
@@ -121,6 +120,6 @@ const passShowHideClicked = ref(true);
 
 
 
-    </div>
+    
 </template>
 
