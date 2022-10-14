@@ -29,28 +29,22 @@ const submit = () => {
 };
 
 const passShowHideClicked = ref(true);
-
 </script>
 
 
 <template>
-  
-
-     <div>
-      <NuxtLayout>
-   
-      
-  <!-- <PremSectionFormScreen v-slot="{ cardClass }" bg="purplePink" has-promo>
+  <div>
+    <NuxtLayout>
+      <!-- <PremSectionFormScreen v-slot="{ cardClass }" bg="purplePink" has-promo>
 
         </PremSectionFormScreen> -->
 
-          <CardBox
-            :class="[cardClass, cardClassAddon]"
-            is-form
-            @submit.prevent="submit"
-          >
-
-          <FormField
+      <CardBox
+        :class="[cardClass, cardClassAddon]"
+        is-form
+        @submit.prevent="submit"
+      >
+        <FormField
           label="Login"
           :error="hasError"
           help="Please enter your login"
@@ -64,7 +58,7 @@ const passShowHideClicked = ref(true);
             autocomplete="username"
           />
         </FormField>
-  
+
         <FormField
           label="Password"
           :error="hasError"
@@ -81,7 +75,7 @@ const passShowHideClicked = ref(true);
             @right-icon-click="passShowHideClicked = true"
           />
         </FormField>
-  
+
         <BaseLevel mobile>
           <FormCheckRadioPicker
             v-model="form.remember"
@@ -93,7 +87,7 @@ const passShowHideClicked = ref(true);
             Forgot password?
           </RouterLink>
         </BaseLevel>
-  
+
         <template #footer>
           <BaseLevel mobile>
             <BaseButtons>
@@ -108,18 +102,8 @@ const passShowHideClicked = ref(true);
             <PremButtonTextLink to="/" :icon="mdiHome" label="Home" small />
           </BaseLevel>
         </template>
-         
-          </CardBox>
-
-
-     
-
-      </NuxtLayout>
-    
-    </div>
-
-
-
-    
+      </CardBox>
+    </NuxtLayout>
+  </div>
 </template>
 
