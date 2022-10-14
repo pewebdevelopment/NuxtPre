@@ -1,18 +1,8 @@
 <script setup>
 import { ref, watch, computed, onMounted } from "vue";
-// import {
-//   Chart,
-//   LineElement,
-//   PointElement,
-//   LineController,
-//   LinearScale,
-//   CategoryScale,
-//   Tooltip,
-// } from "chart.js";
+// The following code is working in development but is giving error during the build process in AWS Hosting
 
-// following code is giving an error during the "npm run dev" process
-import pkg from "chart.js";
-const {
+import {
   Chart,
   LineElement,
   PointElement,
@@ -20,7 +10,19 @@ const {
   LinearScale,
   CategoryScale,
   Tooltip,
-} = pkg;
+} from "chart.js";
+
+// following code is giving an error during the "npm run dev" process
+// import pkg from "chart.js";
+// const {
+//   Chart,
+//   LineElement,
+//   PointElement,
+//   LineController,
+//   LinearScale,
+//   CategoryScale,
+//   Tooltip,
+// } = pkg;
 
 const props = defineProps({
   data: {
