@@ -35,9 +35,7 @@ const passShowHideClicked = ref(true);
 <template>
   <div>
     <NuxtLayout>
-      <!-- <PremSectionFormScreen v-slot="{ cardClass }" bg="purplePink" has-promo>
-
-        </PremSectionFormScreen> -->
+      <PremSectionFormScreen v-slot="{ cardClass }" bg="purplePink" has-promo>
 
       <CardBox
         :class="[cardClass, cardClassAddon]"
@@ -103,7 +101,11 @@ const passShowHideClicked = ref(true);
           </BaseLevel>
         </template>
       </CardBox>
+
+    </PremSectionFormScreen>
     </NuxtLayout>
+
+  
   </div>
 </template>
 

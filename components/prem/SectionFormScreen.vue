@@ -61,7 +61,7 @@ const routes = {
     <div v-if="hasPromo" class="space-y-12 px-12">
       <div class="hidden lg:block">
         <Basebuttons type="justify-center" glue>
-          <BaseButton
+          <!-- <BaseButton
             v-for="(routeLabel, index) in routes"
             :key="index"
             rounded-full
@@ -69,7 +69,7 @@ const routes = {
             :active-soft="index === currentRouteName"
             :label="routeLabel"
             color="whiteDark"
-          /> 
+          />  -->
         </Basebuttons>
       </div>
 
