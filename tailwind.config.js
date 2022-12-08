@@ -2,8 +2,7 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-
-content: [
+  content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
     "./pages/**/*.vue",
@@ -82,11 +81,4 @@ content: [
       );
     }),
   ],
-
-
-
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+};
